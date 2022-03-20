@@ -10,6 +10,7 @@ const handleChange=e=>{
   setSearchTerm(e.target.value)
 }
 
+
   return (
     <>
 
@@ -50,9 +51,10 @@ const handleChange=e=>{
         </div>
        <div className="results">
          <div className="resultContainer">
-           <p className="executionTime">About {data.searchInformation&&data.searchInformation.totalResults} results ({data.formattedSearchTime &&data.formattedSearchTime} seconds) </p>
+           {data.searchInformation&& <p className="executionTime">About {data.searchInformation.totalResults&&data.searchInformation.totalResults} results ({data.searchInformation.formattedSearchTime &&data.searchInformation.formattedSearchTime} seconds) </p>}
+          
          </div>
-         {data.items&&data.items.map(item=>  <div className="result">
+         {data.items&&data.items.map(item=>  <div className="result" key={item.link}> 
            <p className="upperLink">{item.displayLink}</p>
            <a href={item.link} className="linkTitle">{item.title}</a>
            <p className="linkDetail">

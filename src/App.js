@@ -12,7 +12,6 @@ function App() {
   const[data,setData]=useState([]);
   const[searchTerm,setSearchTerm]=useState("")
 
-  console.log(searchTerm)
   return (
     <Context.Provider value={{data,setData,searchTerm,setSearchTerm}}>
     <Routes>

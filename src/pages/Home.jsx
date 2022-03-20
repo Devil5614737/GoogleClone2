@@ -39,7 +39,7 @@ useEffect(()=>{
         }
         
     })
-},[query,navigate,setData])
+},[query,setData])
     
   return (
     <main className="main">
